@@ -5,6 +5,12 @@ public class HelloBiodome02 {
             System.out.println("입력의 개수가 올바르지 않습니다.");
             return;
         }
+
+        if (!(isPositiveNumber(args[0]) && isPositiveNumber(args[1]) && isPositiveNumber(args[2]))) {
+            System.out.println("음수는 입력할 수 없습니다.");
+            return;
+        }
+
         int solarPower = Integer.parseInt(args[0]);
         int windEnergy = Integer.parseInt(args[1]);
         int geothermalEnergy = Integer.parseInt(args[2]);
@@ -20,16 +26,24 @@ public class HelloBiodome02 {
                 .append("입니다.")
                 .append("\n")
                 .append("태양광 ")
-                .append(String.format("%.9f", rateOfSolarPower))
+                .append(rateOfSolarPower)
                 .append("%, ")
                 .append("풍력 ")
-                .append(String.format("%.9f", rateOfWindEnergy))
+                .append(rateOfWindEnergy)
                 .append("%, ")
                 .append("지열 ")
-                .append(String.format("%.9f", rateOfGeothermalEnergy))
+                .append(rateOfGeothermalEnergy)
                 .append("%");
 
         System.out.println(sb);
+    }
+
+    private static boolean isPositiveNumber(String input) {
+        int inputNumber = Integer.parseInt(input);
+        if (inputNumber < 0) {
+            return false;
+        }
+        return true;
     }
 
     private static class EnergyUtils {
@@ -38,7 +52,6 @@ public class HelloBiodome02 {
         }
 
         public static double calculateRateEnergy(int totalEnergy, int targetEnergy) {
-            // double / int 는 자동으로 double로 형변환 ( 묵시적 형변환 )
             return ((double) targetEnergy / totalEnergy) * 100;
         }
     }
