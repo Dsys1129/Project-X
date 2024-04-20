@@ -1,5 +1,6 @@
 public class HelloBiodome02 {
 
+    private static final int LIMIT_ENERGY_VALUE = 30000;
     public static void main(String[] args) {
         if (args.length < 3) {
             System.out.println("입력의 개수가 올바르지 않습니다.");
@@ -11,14 +12,19 @@ public class HelloBiodome02 {
             return;
         }
 
+        if (!(checkMaxInputValue(args[0]) && checkMaxInputValue(args[1]) && checkMaxInputValue(args[2]))) {
+            System.out.println("각 에너지의 생산량은 30000을 넘을 수 없습니다.");
+            return;
+        }
+
         int solarPower = Integer.parseInt(args[0]);
         int windEnergy = Integer.parseInt(args[1]);
         int geothermalEnergy = Integer.parseInt(args[2]);
-        int totalEnergy = EnergyUtils.calculateTotalEnergies(solarPower, windEnergy, geothermalEnergy);
+        int totalEnergy = EnergyCalculator.calculateTotalEnergies(solarPower, windEnergy, geothermalEnergy);
 
-        double rateOfSolarPower = EnergyUtils.calculateRateEnergy(totalEnergy, solarPower);
-        double rateOfWindEnergy = EnergyUtils.calculateRateEnergy(totalEnergy, windEnergy);
-        double rateOfGeothermalEnergy = EnergyUtils.calculateRateEnergy(totalEnergy, geothermalEnergy);
+        double rateOfSolarPower = EnergyCalculator.calculateRateEnergy(totalEnergy, solarPower);
+        double rateOfWindEnergy = EnergyCalculator.calculateRateEnergy(totalEnergy, windEnergy);
+        double rateOfGeothermalEnergy = EnergyCalculator.calculateRateEnergy(totalEnergy, geothermalEnergy);
 
         StringBuilder sb = new StringBuilder();
         sb.append("총 에너지 생성량은 ")
@@ -46,7 +52,17 @@ public class HelloBiodome02 {
         return true;
     }
 
-    private static class EnergyUtils {
+    public static boolean checkMaxInputValue(String input) {
+        int inputNumber = Integer.parseInt(input);
+        if (inputNumber <= LIMIT_ENERGY_VALUE) {
+            return true;
+        }
+        return false;
+    }
+
+
+    private static class EnergyCalculator {
+
         public static int calculateTotalEnergies(int solarPower, int windEnergy, int geothermalEnergy) {
             return solarPower + windEnergy + geothermalEnergy;
         }
@@ -54,5 +70,6 @@ public class HelloBiodome02 {
         public static double calculateRateEnergy(int totalEnergy, int targetEnergy) {
             return ((double) targetEnergy / totalEnergy) * 100;
         }
+
     }
 }
