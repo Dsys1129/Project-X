@@ -1,7 +1,7 @@
 public class HelloBiodome01 {
 
     public static void main(String[] args) {
-        if (args.length < 1 && args.length > 1) {
+        if (args.length < 1 || args.length > 1) {
             System.out.println("입력의 개수가 올바르지 않습니다.");
             return;
         }
@@ -25,6 +25,7 @@ public class HelloBiodome01 {
     }
 
     /**
+     * Bonus
      * 긴 이름 문자열 중 처음부터 10글자를 추출하는 역할을 하는 클래스
      */
     static class NameExtractor {
