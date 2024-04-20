@@ -70,6 +70,5 @@ public class HelloBiodome02 {
         public static double calculateRateEnergy(int totalEnergy, int targetEnergy) {
             return ((double) targetEnergy / totalEnergy) * 100;
         }
-
     }
 }
