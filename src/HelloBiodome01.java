@@ -13,9 +13,27 @@ public class HelloBiodome01 {
             System.out.println("재입력 해 주세요");
             return;
         }
+        if (args[0].length() < 10)
+            stringBuilder
+                    .append(inputName)
+                    .append(" - > ")
+                    .append("어서오세요")
+                    .append(" ")
+                    .append("\"")
+                    .append(inputName)
+                    .append("\"")
+                    .append("님");
+        System.out.println(stringBuilder);
 
-        String extractedName = NameExtractor.extractName(inputName.toCharArray(), "", 0);
-        stringBuilder.append("어서오세요")
+        stringBuilder = new StringBuilder();
+
+        // 보너스 문제
+        String bonusInput = "일이삼사오육칠팔구십일이삼사오육칠팔구십";
+        String extractedName = NameExtractor.extractName(bonusInput.toCharArray(), "", 0);
+        stringBuilder
+                .append(bonusInput)
+                .append(" - > ")
+                .append("보너스 문제 입니다. 어서오세요")
                 .append(" ")
                 .append("\"")
                 .append(extractedName)
