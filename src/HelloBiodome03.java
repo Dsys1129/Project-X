@@ -1,6 +1,6 @@
 public class HelloBiodome03 {
     public static void main(String[] args) {
-        if (args.length < 3) {
+        if (args.length < 3 || args.length > 3) {
             System.out.println("입력된 값이 올바르지 않습니다. [온도][습도][산소농도] 순서 대로 숫자 값을 입력해주세요");
             return;
         }
@@ -11,7 +11,6 @@ public class HelloBiodome03 {
                 return;
             }
         }
-
         double temperature = Double.parseDouble(args[0]);
         double humidity = Double.parseDouble(args[1]);
         double oxygen = Double.parseDouble(args[2]);
