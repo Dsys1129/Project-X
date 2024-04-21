@@ -1,6 +1,6 @@
 public class HelloBiodome03 {
     public static void main(String[] args) {
-        if (args.length < 3) {
+        if (args.length < 3 || args.length > 3) {
             System.out.println("입력된 값이 올바르지 않습니다. [온도][습도][산소농도] 순서 대로 숫자 값을 입력해주세요");
             return;
         }
@@ -11,7 +11,6 @@ public class HelloBiodome03 {
                 return;
             }
         }
-
         double temperature = Double.parseDouble(args[0]);
         double humidity = Double.parseDouble(args[1]);
         double oxygen = Double.parseDouble(args[2]);
@@ -29,7 +28,7 @@ public class HelloBiodome03 {
      * 생명 지수를 계산하는 책임이 있는 Calculator 클래스
      */
     public static class Calculator {
-        private static final double B = 0.415;
+        private static final double BIONETY_CONSTANT = 0.415;
 
         // √습도와 온도를 입력 받아 절대값을 계산하고 결과를 반환하는 수식을 메서드로 구현한다.
         private static double calculateAbsoluteDifference(double humidity, double temperature) {
@@ -39,7 +38,7 @@ public class HelloBiodome03 {
         // 생명나무의 생명지수를 계산하는 수식을 메서드로 구현한다.
         // 외부에 공개될 API
         public static double calculateH(double temperature, double humidity, double oxygen) {
-            return B * calculateAbsoluteDifference(humidity, temperature) + (oxygen / CustomMath.pow(CustomMath.PI));
+            return BIONETY_CONSTANT * calculateAbsoluteDifference(humidity, temperature) + (oxygen / CustomMath.pow(CustomMath.PI));
         }
     }
 
@@ -69,7 +68,7 @@ public class HelloBiodome03 {
         }
 
         double guess = number;
-        double epsilon = 1e-6;
+        double epsilon = 1e-7;
 
         while (true) {
             double nextGuess = 0.5 * (guess + number / guess);
