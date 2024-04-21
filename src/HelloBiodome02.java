@@ -1,6 +1,7 @@
 public class HelloBiodome02 {
 
     private static final int LIMIT_ENERGY_VALUE = 30000;
+
     public static void main(String[] args) {
         if (args.length < 3) {
             System.out.println("입력의 개수가 올바르지 않습니다.");
@@ -27,7 +28,13 @@ public class HelloBiodome02 {
         double rateOfGeothermalEnergy = EnergyCalculator.calculateRateEnergy(totalEnergy, geothermalEnergy);
 
         StringBuilder sb = new StringBuilder();
-        sb.append("총 에너지 생성량은 ")
+        sb.append(solarPower)
+                .append(" ")
+                .append(windEnergy)
+                .append(" ")
+                .append(geothermalEnergy)
+                .append("\n")
+                .append("총 에너지 생성량은 ")
                 .append(totalEnergy)
                 .append("입니다.")
                 .append("\n")
