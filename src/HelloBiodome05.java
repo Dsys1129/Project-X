@@ -1,8 +1,6 @@
-import java.io.IOException;
-
 public class HelloBiodome05 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         byte[] gAndH = getGAndH();
         byte g = gAndH[0];
         byte h = gAndH[1];

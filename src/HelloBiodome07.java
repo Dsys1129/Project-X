@@ -19,7 +19,7 @@ public class HelloBiodome07 {
 
         String result = DnaCompressor.compressDnaIgnoreWhitespace(inputDna.toCharArray()).toUpperCase();
         System.out.println(result);
-        System.out.println(DnaCompressor.compressDnaWithWhitespace("CCCCHHHH JJ   EEEEJJ".toCharArray()).toUpperCase());
+        System.out.println(DnaCompressor.compressDnaWithWhitespace("CCJJhhJJJJJ EEEEEHHHH jjjCCCCC".toCharArray()).toUpperCase());
     }
 
     static class DnaCompressor {

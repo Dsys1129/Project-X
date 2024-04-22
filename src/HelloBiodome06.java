@@ -10,6 +10,7 @@ public class HelloBiodome06 {
 
         String dna1 = args[0].toLowerCase();
         String dna2 = args[1].toLowerCase();
+        System.out.println(dna1 + " " + dna2);
 
         // length() 메서드를 이용해 입력 받은 두개 문자의 길이가 동일한지 확인한다.
         if (dna1.length() == dna2.length()) {
@@ -25,11 +26,10 @@ public class HelloBiodome06 {
 
         // 첫 번째 유전자 코드가 두 번째 유전자 코드에 포함 여부를 확인하는 기능을 구현한다.
         if (DnaChecker.isContainsDna(dna1, dna2)) {
-            System.out.println("부분적으로 포함됩니다.");
+            System.out.println("보너스 문제 -> 부분적으로 포함됩니다.");
         } else {
-            System.out.println("포함되지 않습니다.");
+            System.out.println("보너스 문제 -> 포함되지 않습니다.");
         }
-
     }
 
     static class DnaChecker {
