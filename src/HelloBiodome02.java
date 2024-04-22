@@ -68,6 +68,9 @@ public class HelloBiodome02 {
     }
 
 
+    /**
+     * 에너지를 계산하는 역할을 가지는 클래스
+     */
     private static class EnergyCalculator {
 
         public static int calculateTotalEnergies(int solarPower, int windEnergy, int geothermalEnergy) {
