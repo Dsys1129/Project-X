@@ -16,8 +16,10 @@ public class HelloBiodome03 {
         double oxygen = Double.parseDouble(args[2]);
         double H = Calculator.calculateH(temperature, humidity, oxygen);
 
+        System.out.println(temperature + " " + humidity + " " + oxygen);
+        System.out.println("생명지수 H = " + H);
         // 소수 셋째자리에서 반올림하여 출력
-        System.out.println("생명지수 H = " + String.format("%.2f", H));
+        System.out.println("보너스 문제 -> 생명지수 H = " + String.format("%.2f", H));
     }
 
     private static boolean isNumber(String input) {
@@ -68,7 +70,7 @@ public class HelloBiodome03 {
         }
 
         double guess = number;
-        double epsilon = 1e-7;
+        double epsilon = 1e-10;
 
         while (true) {
             double nextGuess = 0.5 * (guess + number / guess);

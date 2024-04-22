@@ -16,6 +16,7 @@ public class HelloBiodome04 {
         double temperature = Double.parseDouble(args[0]);
         double humidity = Double.parseDouble(args[1]);
         double oxygen = Double.parseDouble(args[2]);
+        System.out.println(temperature + " " + humidity + " " + oxygen);
 
         if (!Validator.validateTemperate(temperature)) {
             System.out.println("온도값이 정상 범위를 벗어났습니다. 확인이 필요합니다.");
@@ -27,9 +28,9 @@ public class HelloBiodome04 {
             System.out.println("산소값이 정상 범위를 벗어났습니다. 확인이 필요합니다.");
         } else {
             double H = Calculator.calculateH(temperature, humidity, oxygen);
-            System.out.println("생명의 나무는 안정적인 상태입니다. 건강 지수는 " + String.format("%.2f", H) + "입니다.");
+            System.out.println("생명의 나무는 안정적인 상태입니다 :)");
+            System.out.println("보너스 문제 -> 생명의 나무는 안정적인 상태입니다. 건강 지수는 " + String.format("%.2f", H) + "입니다.");
         }
-
     }
 
     private static boolean isNumber(String input) {
@@ -89,7 +90,7 @@ public class HelloBiodome04 {
      */
     private static class CustomMath {
         public static final double PI = 3.14;
-        public static final double EPSILON = 1e-7;
+        public static final double EPSILON = 1e-10;
 
         public static double pow(double number) {
             return number * number;
@@ -102,7 +103,7 @@ public class HelloBiodome04 {
             return -number;
         }
 
-        // 반복문 사용 금지
+        // 반복문 사용 금지 재귀 사용
         public static double sqrt(double number, double guess) {
             double nextGuess = 0.5 * (guess + number / guess);
             double absNumber = abs(nextGuess - guess);
