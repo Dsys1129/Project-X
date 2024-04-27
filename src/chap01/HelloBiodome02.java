@@ -1,3 +1,5 @@
+package chap01;
+
 public class HelloBiodome02 {
 
     private static final int LIMIT_ENERGY_VALUE = 30000;
@@ -66,7 +68,6 @@ public class HelloBiodome02 {
         }
         return false;
     }
-
 
     /**
      * 에너지를 계산하는 역할을 가지는 클래스

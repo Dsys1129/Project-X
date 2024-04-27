@@ -1,3 +1,5 @@
+package chap01;
+
 import java.util.Arrays;
 
 public class HelloBiodome08 {
@@ -25,21 +27,19 @@ public class HelloBiodome08 {
             return;
         }
 
-
-
         // 사전 단어의 길이가 긴 순서대로 정렬
         Arrays.sort(MessageFormatter.ENGLISH_DICTIONARY, (o1, o2) -> o2.length() - o1.length());
         Arrays.sort(MessageFormatter.KOREAN_DICTIONARY, (o1, o2) -> o2.length() - o1.length());
 
-
+        System.out.println(input);
         String result = MessageFormatter.addWhiteSpaceEnglish(input.trim(), MessageFormatter.ENGLISH_DICTIONARY);
         System.out.println(result);
 
-        String bonusResult = MessageFormatter.addWhiteSpaceKorean("당신의신속한도움이필요합니다", MessageFormatter.KOREAN_DICTIONARY);
-        System.out.println(bonusResult);
+        String bonusInput = "안녕하세요새로운나무를발견했습니다";
+        System.out.println("보너스 문제 입력 -> " + bonusInput);
+        String bonusResult = MessageFormatter.addWhiteSpaceKorean(bonusInput, MessageFormatter.KOREAN_DICTIONARY);
+        System.out.println("보너스 문제 출력 -> " + bonusResult);
     }
-
-
 
     static class MessageFormatter {
 

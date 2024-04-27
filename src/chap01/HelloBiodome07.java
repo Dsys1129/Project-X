@@ -1,3 +1,5 @@
+package chap01;
+
 public class HelloBiodome07 {
 
     public static void main(String[] args) {
@@ -11,15 +13,19 @@ public class HelloBiodome07 {
             stringBuffer.append(arg).append(" ");
         }
         String inputDna = stringBuffer.toString().trim();
-
+        System.out.println("[입력] " + inputDna);
         if (!inputDna.matches("^[CYJEH ]*$")) {
             System.out.println("염기서열은 C, J, H, E, Y 다섯가지로만 입력됩니다. 확인하고 다시 입력해주세요");
             return;
         }
 
         String result = DnaCompressor.compressDnaIgnoreWhitespace(inputDna.toCharArray()).toUpperCase();
-        System.out.println(result);
-        System.out.println(DnaCompressor.compressDnaWithWhitespace("CCJJhhJJJJJ EEEEEHHHH jjjCCCCC".toCharArray()).toUpperCase());
+
+        System.out.println("[출력] " + result);
+        String bonusInput = "CCCCHHHH JJ   EEEEJJ";
+        System.out.println("보너스 입력 -> " + bonusInput);
+        String bonusResult = DnaCompressor.compressDnaWithWhitespace(bonusInput.toCharArray()).toUpperCase();
+        System.out.println("보너스 출력 -> " + bonusResult);
     }
 
     static class DnaCompressor {

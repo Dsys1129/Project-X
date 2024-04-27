@@ -1,3 +1,5 @@
+package chap01;
+
 public class HelloBiodome03 {
     public static void main(String[] args) {
         if (args.length < 3 || args.length > 3) {

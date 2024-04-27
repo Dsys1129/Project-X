@@ -1,3 +1,5 @@
+package chap01;
+
 public class HelloBiodome09 {
 
     public static void main(String[] args) {
@@ -18,8 +20,6 @@ public class HelloBiodome09 {
         }
 
         createTree(height, bonusCharacter);
-
-
     }
 
     private static boolean isDigit(String input) {
@@ -52,7 +52,7 @@ public class HelloBiodome09 {
                 for (int j = 0; j < height - i - 1; j++) {
                     System.out.print(" ");
                 }
-
+                // 별 및 특수문자 출력
                 for (int j = 0; j < 2 * i + 1; j++) {
                     if (j == i) {
                         System.out.print(bonusCharacter);

@@ -1,3 +1,5 @@
+package chap01;
+
 public class HelloBiodome04 {
 
     public static void main(String[] args) {
