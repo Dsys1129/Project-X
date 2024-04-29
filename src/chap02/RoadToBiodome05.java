@@ -2,9 +2,6 @@ package chap02;
 
 import java.util.Arrays;
 
-// 기존 문제 O
-// 보너스 문제 O
-
 // 입력 형식 "[11, 69, 41, 3, 10, 65, 7, 8]" "[30, 5, 79, 57, 1, 13, 28, 88, 18, 24]"
 public class RoadToBiodome05 {
 
@@ -15,6 +12,7 @@ public class RoadToBiodome05 {
             return;
         }
 
+        System.out.println("입력 : " + args[0] + " " + args[1]);
         String[] input1 = args[0].replaceAll("[\\[\\],]", "").split(" ");
         String[] input2 = args[1].replaceAll("[\\[\\],]", "").split(" ");
         if (!isNumbers(input1) || !isNumbers(input2)) {
@@ -53,7 +51,7 @@ public class RoadToBiodome05 {
     private static boolean isNumbers(String[] strings) {
         for (String s : strings) {
             for (char c : s.toCharArray()) {
-                if (c < '0' && c > '9') {
+                if (c < '0' || c > '9') {
                     return false;
                 }
             }
@@ -101,7 +99,6 @@ public class RoadToBiodome05 {
             return low;
         }
 
-        // O(n^2)
         public static int[] bubbleSortOrderByASC(int[] numbers) {
             int[] sortedArr = Arrays.copyOf(numbers, numbers.length);
             for (int i = 0; i < sortedArr.length - 1; i++) {
