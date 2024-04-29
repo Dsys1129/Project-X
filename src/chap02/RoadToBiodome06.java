@@ -10,6 +10,7 @@ public class RoadToBiodome06 {
             System.out.println("입력값이 올바르지 않습니다");
             return;
         }
+        System.out.println("입력 : " + args[0] + " , " + args[1]);
 
         String[] input1 = args[0].replaceAll("[\\[\\],]", "").split(" ");
         String[] input2 = args[1].replaceAll("[\\[\\],]", "").split(" ");
@@ -41,7 +42,6 @@ public class RoadToBiodome06 {
             }
             arr2[i] = number;
         }
-        System.out.println("입력 : " + Arrays.toString(arr1) + " , " + Arrays.toString(arr2));
 
         Arrays.sort(arr1);
         Arrays.sort(arr2);
@@ -63,16 +63,9 @@ public class RoadToBiodome06 {
                 " Median : " + String.format("%.1f", bonusMedian));
     }
 
-    private static double getMeans(int[] arr1, int[] arr2) {
-        int sumOfArr1 = Arrays.stream(arr1).sum();
-        int sumOfArr2 = Arrays.stream(arr2).sum();
-
-        return  (double)(sumOfArr1 + sumOfArr2) / (arr1.length + arr2.length);
-    }
-
     // log - > binary Search
     // 중앙값일 조건
-    // 1. shortArr 왼쪽 부분의 최대값(shortArrLeft)가 longArr의 오른쪽 부분의 최소값(longArrRight)의 값보다 작거나 같음
+    // 1. shortArr 왼쪽 부분의 최대값(shortArrLeft)이 longArr의 오른쪽 부분의 최소값(longArrRight)의 값보다 작거나 같음
     // 2. longArr 왼쪽 부분의 최대값(longArrLeft)가 shortArr의 오른쪽 부분의 최소값 보다 작거나 같아야함
     // ==> 왼쪽 그룹의 모든 수는 오른쪽 그룹의 모든 수보다 작아야 함
     // 3. 전체 개수가 짝수일때, 왼쪽 그룹의 원소의 개수와 오른쪽 그룹의 원소의 개수가 같아야함
@@ -123,6 +116,12 @@ public class RoadToBiodome06 {
         }
 
         return result;
+    }
+    private static double getMeans(int[] arr1, int[] arr2) {
+        int sumOfArr1 = Arrays.stream(arr1).sum();
+        int sumOfArr2 = Arrays.stream(arr2).sum();
+
+        return  (double)(sumOfArr1 + sumOfArr2) / (arr1.length + arr2.length);
     }
 
     private static boolean isNumbers(String[] strings) {

@@ -13,9 +13,10 @@ public class RoadTobiodome07 {
             System.out.println("입력값이 올바르지 않습니다. 다시 확인해주세요");
         }
 
+        System.out.println("입력 : " + args[0]);
         String[] input = args[0].replaceAll("[\\[\\],]", "").split(" ");
 
-        if (isNumbers(input)) {
+        if (!isNumbers(input)) {
             System.out.println("입력값이 올바르지 않습니다. 다시 확인해주세요");
             return;
         }
@@ -65,7 +66,7 @@ public class RoadTobiodome07 {
     private static boolean isNumbers(String[] strings) {
         for (String s : strings) {
             for (char c : s.toCharArray()) {
-                if (!Character.isDigit(c)) {
+                if (Character.isDigit(c)) {
                     return false;
                 }
             }

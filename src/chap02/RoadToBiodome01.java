@@ -1,11 +1,15 @@
 package chap02;
 
+import java.util.Arrays;
+
 public class RoadToBiodome01 {
 
     public static void main(String[] args) {
         int[] waves = new int[1001];
         StringBuilder stringBuilder = new StringBuilder();
         String[] input = args[0].replaceAll(",", "").split(" ");
+        System.out.println("입력 : " + Arrays.toString(input));
+
         for (String str : input) {
             stringBuilder.append(str).append(" ");
             // 입력값이 올바르지 않은 경우 사용자에게 안내 메시지를 출력한다.
@@ -35,8 +39,6 @@ public class RoadToBiodome01 {
                 break;
             }
         }
-
-        System.out.println("입력 : " + stringBuilder.toString().trim());
         System.out.println("결과 : " + result);
     }
 
