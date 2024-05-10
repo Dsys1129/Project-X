@@ -1,6 +1,5 @@
 package chap04.p5;
 
-// TODO 기본, 보너스 완료
 public class RuleOfBiodome05 {
 
     public static void main(String[] args) {
