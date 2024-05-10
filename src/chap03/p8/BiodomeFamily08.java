@@ -28,13 +28,13 @@ public class BiodomeFamily08 {
 
         club.searchSessionBy(SessionStatus.CREATED);
 
-        john.postponeSession(createdSession, createdSession.getDate().plusDays(1));
+        john.postponeSession(createdSession, createdSession.getDate().plusDays(7));
 
         john.deleteSession(createdSession);
 
         club.searchSessionBy(SessionStatus.CANCELED);
 
-        System.out.println("=============== Bonus =================");
+        System.out.println("\n=============== Bonus =================");
 
         Session bonusCreatedSession = john.createSession("도메 스타디움", LocalDateTime.now());
         OtherAreaMember otherAreaMember = new OtherAreaMember("타지역", LocalDateTime.now(), "초급", "타지역");
