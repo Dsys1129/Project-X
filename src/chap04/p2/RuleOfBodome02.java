@@ -7,12 +7,11 @@ import chap04.p2.user.Manager;
 import chap04.p2.user.Member;
 import chap04.p2.user.Student;
 
-public class BiodomeFamily02 {
+public class RuleOfBodome02 {
 
     public static void main(String[] args) {
         Library library = new Library();
 
-        // 사용자 생성 및 등록
         Manager seiko = new Manager("1", "세이코");
         seiko.setLibrary(library);
 

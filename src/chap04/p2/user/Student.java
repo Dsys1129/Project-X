@@ -3,7 +3,6 @@ package chap04.p2.user;
 
 import chap04.p2.book.Book;
 import chap04.p2.book.Magazine;
-import chap04.p2.book.TextBook;
 
 public class Student extends User implements BookBorrowable {
 

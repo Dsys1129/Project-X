@@ -6,6 +6,4 @@ public class RegularDevice extends Device implements Powerable {
         System.out.print("일반 기기가 생성되었습니다 : ");
         displayInfo();
     }
-
-
 }

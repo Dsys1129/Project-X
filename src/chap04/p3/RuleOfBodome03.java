@@ -1,9 +1,7 @@
 package chap04.p3;
 
 
-
-//TODO 기본, 보너스 완료
-public class BiodomeFamily09 {
+public class RuleOfBodome03 {
     public static void main(String[] args) {
         RegularDevice doorOpener = new RegularDevice("도어 오프너");
         SmartDevice autoMirror = new SmartDevice("자동 거울", "기분을 인식해 옷을 추천하는 기능");
