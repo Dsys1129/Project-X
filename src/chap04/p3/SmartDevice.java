@@ -1,6 +1,6 @@
 package chap04.p3;
 
-public class SmartDevice extends Device implements FeatureActivatable{
+public class SmartDevice extends Device implements FeatureActivatable {
 
     private String feature;
 

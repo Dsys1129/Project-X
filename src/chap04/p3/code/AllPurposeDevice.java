@@ -14,8 +14,6 @@ class AllPurposeDevice implements Device {
         details.displayAndPowerOn();
     }
 
-
-
     @Override
     public void activateFeature() {
         System.out.println(feature + " 기능을 활성화 시켰습니다.");

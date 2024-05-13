@@ -1,7 +1,6 @@
 package chap04.p3;
 
 
-import chap04.p3.code.RegularDevice;
 
 //TODO 기본, 보너스 완료
 public class BiodomeFamily09 {

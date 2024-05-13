@@ -12,7 +12,7 @@ public abstract class Device implements Powerable, EnergySavable {
     }
 
     public void displayInfo() {
-        System.out.println(this.name + " " + this.brand);
+        System.out.println(this.name + ", " + this.brand);
     }
 
     @Override
