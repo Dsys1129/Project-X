@@ -23,6 +23,7 @@ public class RuleOfBiodome05 {
         System.out.println();
         plantHashMap.remove("민들레");
 
+        System.out.println();
         plantHashMap.getIndex("장미");
         plantHashMap.getIndex("해바라기");
 
