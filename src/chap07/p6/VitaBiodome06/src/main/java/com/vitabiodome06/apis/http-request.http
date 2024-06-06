@@ -1,0 +1,35 @@
+### 과일 이름의 목록
+GET http://localhost:8080/
+
+### 특정 과일의 이름 경로
+GET http://localhost:8080/apple
+
+### 없는 과일의 이름 경로
+GET http://localhost:8080/unknown
+
+### 새로운 과일 추가
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "name": "newFruit",
+  "price": 100000
+}
+
+### 과일 재고 추가
+PUT http://localhost:8080/apple
+
+### 없는 과일 재고 추가
+PUT http://localhost:8080/unknown
+
+### 과일 삭제
+DELETE http://localhost:8080/apple
+
+### 없는 과일 삭제
+DELETE http://localhost:8080/unknown
+
+### BONUS OPTIONS
+OPTIONS http://localhost:8080/
+
+### BONUS RECENT REQUEST
+GET http://localhost:8080/recent-requested
