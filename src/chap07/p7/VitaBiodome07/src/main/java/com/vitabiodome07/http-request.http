@@ -1,0 +1,30 @@
+### GET /visit With X-Forwarded-For Header
+GET http://localhost:8087/visit
+X-Forwarded-For: 47.121.85.71
+
+### POST /visit With X-Forwarded-For Header
+POST http://localhost:8087/visit
+X-Forwarded-For: 47.121.85.72
+
+### GET Wrong Path
+GET http://localhost:8087/unknown
+X-Forwarded-For: 47.121.85.71
+
+### POST Wrong Path
+POST http://localhost:8087/unknown
+X-Forwarded-For: 47.121.85.71
+
+### GET /visit Without X-Forwarded-For Header
+GET http://localhost:8087/visit
+
+### POST /visit Without X-Forwarded-For Header
+POST http://localhost:8087/visit
+
+### GET /top-referer
+GET http://localhost:8087/top-referer
+X-Forwarded-For: 47.121.85.72
+
+### POST /visit With referer Header
+POST http://localhost:8087/visit
+X-Forwarded-For: 47.121.85.72
+referer: https://biodome.com
