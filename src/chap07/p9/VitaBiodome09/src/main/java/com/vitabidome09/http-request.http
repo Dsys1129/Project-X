@@ -1,0 +1,32 @@
+### GET /
+GET http://localhost:8089/
+Authorization: biodomeUser1:YmlvZG9tZVVzZXIx
+
+### GET /admin User is Admin
+GET http://localhost:8089/admin
+Authorization: biodomeAdmin:YmlvZG9tZUFkbWlu
+
+### GET /admin User is Not Admin
+GET http://localhost:8089/admin
+Authorization: biodomeUser1:YmlvZG9tZVVzZXIx
+
+### GET / Password is Not Correct
+GET http://localhost:8089/
+Authorization: biodomeUser1:notCorrect
+
+### GET / Id is Not exsists
+GET http://localhost:8089/
+Authorization: notExsistsUser:YmlvZG9tZVVzZXIx
+
+### PUT /change-password
+PUT http://localhost:8089/change-password
+Content-Type: application/json
+Authorization: biodomeUser1:YmlvZG9tZVVzZXIx
+
+{
+  "newPassword":"changePassword"
+}
+
+### GET /previous-password
+GET http://localhost:8089/previous-password
+Authorization: biodomeUser1:YmlvZG9tZVVzZXIx
