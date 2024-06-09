@@ -1,0 +1,29 @@
+### GET / Windows
+GET http://localhost:8088/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
+
+### GET / MAC OS
+GET http://localhost:8088/
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36
+
+### GET / Linux
+GET http://localhost:8088/
+User-Agent: Mozilla/5.0 (Linux; diordnA 13; SM-A715F Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/124.0.6367.123 eliboM Safari/537.36
+
+### GET / Iphone
+GET http://localhost:8088/
+User-Agent: Mozilla/5.0 (IPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15(KHTML, like Gecko) CriOS/80.0.3987.95 Mobile/15E148 Safari/604.1
+
+### GET / Android
+GET http://localhost:8088/
+User-Agent: Mozilla/5.0 (Linux; Android 14; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.113 Mobile Safari/537.36
+
+### GET /naver Mobile
+GET http://localhost:8088/naver
+User-Agent: Mozilla/5.0 (Linux; Android 14; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.113 Mobile Safari/537.36
+Referer: biodome-citizen.com
+
+### GET /naver PC
+GET http://localhost:8088/naver
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36Referer: biodome-citizen.com
+Referer: biodome-citizen.com
