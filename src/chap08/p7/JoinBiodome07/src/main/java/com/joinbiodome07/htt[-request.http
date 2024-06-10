@@ -1,0 +1,12 @@
+### GET /posts
+GET http://localhost:8097/posts
+
+### POST /posts
+POST http://localhost:8097/posts
+Content-Type: application/json
+
+{
+  "title": "제목2",
+  "writer": "작성자2",
+  "content": "내용2"
+}
