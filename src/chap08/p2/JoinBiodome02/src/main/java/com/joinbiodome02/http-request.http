@@ -1,0 +1,42 @@
+### 기본 문제 유저 수정 1
+PUT http://localhost:8092/users/1
+Content-Type: application/json
+
+{
+  "name": "name1",
+  "interests": ["BALLET", "LANGUAGE"],
+  "team": "GREENDYNAMO",
+  "email": "email@email.com"
+}
+
+### 기본 문제 유저 수정 2
+PUT http://localhost:8092/users/1
+Content-Type: application/json
+
+{
+  "name": "name1000",
+  "team": "WILDAVENGERS",
+  "email": "email@email.com"
+}
+
+### 이름 없이 유저 수정
+PUT http://localhost:8092/users/1
+Content-Type: application/json
+
+{
+  "name": "name1000",
+  "team": "WILDAVENGERS",
+  "email": "email@email.com"
+}
+
+### 팀 없이 유저 수정
+PUT http://localhost:8092/users/1
+Content-Type: application/json
+
+{
+  "name": "name1000",
+  "email": "email@email.com"
+}
+
+### Bonus 수정 이력들 조회
+GET http://localhost:8092/users/edit-history
