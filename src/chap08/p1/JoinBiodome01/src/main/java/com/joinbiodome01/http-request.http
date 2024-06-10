@@ -1,0 +1,36 @@
+### 전체 유저 조회
+GET http://localhost:8091/users
+
+### 기본 문제 유저 등록
+POST http://localhost:8091/users
+Content-Type: application/json
+
+{
+  "name": "name1",
+  "interests": ["GRAVBY", "WALKING"],
+  "team": "SPRINGWATT",
+  "email": "email@email.com"
+}
+
+### Team으로 검색
+GET http://localhost:8091/users?team=SPRINGWATT
+
+### Interest로 검색
+GET http://localhost:8091/users?interest=GRAVBY
+
+### 지원하지 않는 queryString
+GET http://localhost:8091/users?unknown=GRAVBY
+
+### Bonus Id추가 가입 (ID는 하나씩 증가, 이름은 중복 가능
+POST http://localhost:8091/users/signup
+Content-Type: application/json
+
+{
+  "name": "name1",
+  "interests": ["GRAVBY", "WALKING"],
+  "team": "SPRINGWATT",
+  "email": "email@email.com"
+}
+
+### Bonus Id 조회
+GET http://localhost:8091/users/4
