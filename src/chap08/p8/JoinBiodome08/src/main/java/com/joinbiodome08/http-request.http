@@ -1,0 +1,21 @@
+### POST /posts
+POST http://localhost:8098/posts
+Content-Type: application/json
+
+{
+  "writer": "user1",
+  "content": "content1"
+}
+
+### POST /posts
+POST http://localhost:8098/posts
+Content-Type: application/json
+
+{
+  "writer": "user2",
+  "content": "content2"
+}
+
+### DELETE /posts
+DELETE http://localhost:8098/posts/0
+
