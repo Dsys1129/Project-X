@@ -1,0 +1,8 @@
+### DELETE /usrs/1 : 존재하는 사용자 삭제 요청
+DELETE http://localhost:8093/users/1
+
+### DELETE /usrs/1 : 존재하지 않는 사용자 삭제 요청
+DELETE http://localhost:8093/users/100
+
+### DELETE /usrs/abc : 잘못된 입력
+DELETE http://localhost:8093/users/abc
