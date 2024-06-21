@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS User (
+
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    userId VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS ExplorationLog (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    body TEXT NOT NULL,
+    createdBy VARCHAR(255),
+    CONSTRAINT fk_explorationlog_user FOREIGN KEY (createdBy) REFERENCES User(userId)
+);
